@@ -51,11 +51,14 @@ const formik = useFormik({
     };
 
     try {
-      const res = await fetch(`https://registerformbackend.onrender.com/register`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(newSubmission),
-      });
+    const url = `https://registerformbackend.onrender.com/register`;
+console.log("Posting to:", url);
+const res = await fetch(url, {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(newSubmission),
+});
+
 
       const data = await res.json();
 
