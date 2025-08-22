@@ -51,7 +51,7 @@ const formik = useFormik({
     };
 
     try {
-      const res = await fetch(`${process.env}register`, {
+      const res = await fetch(`https://registerformbackend.onrender.com/register`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(newSubmission),
